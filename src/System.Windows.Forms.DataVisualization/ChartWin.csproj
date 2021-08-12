@@ -1,13 +1,24 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0-windows7.0</TargetFramework>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <PackageId>HIC.System.Windows.Forms.DataVisualization</PackageId>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CLSCompliant>false</CLSCompliant>
     <NoWarn>$(NoWarn);618</NoWarn>
     <DefineConstants>$(DefineConstants);WINFORMS_CONTROL</DefineConstants>
     <UseWindowsForms>true</UseWindowsForms>
+    <id>HIC.System.Windows.Forms.DataVisualization</id>
+    <version>1.0.0</version>
+    <title>HIC.System.Windows.Forms.DataVisualization</title>
+    <authors>Microsoft, adapted for dotnet5 by HIC</authors>
+    <owners>Health Informatics Centre, University of Dundee</owners>
+    <licenseUrl>https://github.com/HicServices/winforms-datavisualization/blob/main/LICENSE.TXT</licenseUrl>
+    <projectUrl>https://github.com/HicServices/winforms-datavisualization</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>System.Windows.Forms.DataVisualization ported to dotnet5 and retargetted to Microsoft.Data.SqlClient instead of System.Data.SqlClient</description>
+    <copyright>Copyright 2018-2021</copyright>
     <!-- <Win32Manifest>Resources\System\Windows\Forms\XPThemes.manifest</Win32Manifest> -->
   </PropertyGroup>
 
@@ -32,13 +43,8 @@
       <GenerateSource>true</GenerateSource>
       <Namespace>System.Windows.Forms.DataVisualization.Charting</Namespace> <!-- I think you want System here -->
     </EmbeddedResource>
+    <None Include="*.TXT" Pack="True" PackagePath="\" />
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="4.6.0-preview.19073.11" />
-    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
-    <PackageReference Include="System.Windows.Extensions" Version="4.6.0-preview.19073.11" />
-  </ItemGroup>-->
 
   <!-- <ItemGroup>
     <EmbeddedResource Update="Resources\SR.resx">
